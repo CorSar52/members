@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Случайный член экипажа</title>
+</head>
+<body>
+    <header>
+        <h1>Космическая миссия</h1>
+    </header>
+
+    <main>
+        <h2>{{ member.first_name }} {{ member.last_name }}</h2>
+    <img src="{{ member.photo }}" alt="Фото {{ member.first_name }}" width="200">
+
+    <h3>Специальности:</h3>
+    <ul>
+        {% for spec in member.specialties | sort %}
+            <li>{{ spec }}</li>
+        {% endfor %}
+    </ul>
+    </main>
+</body>
+</html>
